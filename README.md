@@ -13,8 +13,11 @@ Informações clínicas referentes aos procedimentos que os gatos já passaram.
 
 ## To Do:
 [] Ver como criar um índice
+
 [] Terminar de implementar a View
+
 [] Ler toda a página de Schemas (O que eu não fiz) https://mongoosejs.com/docs/guide.html#schemas
+
 [] Trabalhar com algum subdocument (Coisa que eu não fiz)
 
 ## Ideia de visão
