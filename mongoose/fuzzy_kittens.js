@@ -49,11 +49,11 @@ async function insereConsultas() {
 async function query() {
   // Gatos que tem todas as alergias do ".all"
   const query1 = await Kitten.find().where('allergies').all(['paracetamol', 'dipirona']);
-  console.log(query1);
+  //console.log(query1);
 
   // Gatos com mais de 5 anos e que têm alergia à dipirona
   const query2 = await Kitten.find().and([{age: {$gt: 5}}, {allergies: {$in: ['dipirona']}}])
-  console.log(query2);
+  //console.log(query2);
 
   // Testando o q.exec().
   const q = Kitten.findOne({title: 'Lindinha'});
@@ -75,10 +75,17 @@ async function query() {
     at least one element that matches all the specified
     query criteria.
   */
-  const query3 = await Kitten.find().elemMatch('allergies', {allergies: "cebola"})
+  const query3 = await Kitten.find().elemMatch('allergies', {allergies: "cebola"});
+  //console.log(query3);
 
-  console.log(query3)
+  // A primeira alergia de todos os gatos
+  const query4 = await Kitten.find().select({"name": 1, "allergies": 1, _id: 0}).slice('allergies', 1)
+  //console.log(query4);
 
+  // Trying population
+  const trio = await Kitten.findOne({name: 'Lindinha'}).populate('livesTogether').select({"livesTogether": 1}).exec();
+
+  console.log(`Os gatos que moram juntos são ${trio.livesTogether}.`)
 }
 
 main()
