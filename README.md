@@ -2,27 +2,27 @@
 
 Modelagem de dados que contém informações clínicas de gatos e as informações deles, como nome, idade, alergias.
 
-# Kittens 
+## Kittens 
 (Schema e modelagem em Kitten.js)
 Informação dos animais.
 
 
-# Clinical
+## Clinical
 (Schema e modelagem em Clinical.js)
 Informações clínicas referentes aos procedimentos que os gatos já passaram.
 
-# To Do:
+## To Do:
 [] Ver como criar um índice
 [] Terminar de implementar a View
 [] Ler toda a página de Schemas (O que eu não fiz) https://mongoosejs.com/docs/guide.html#schemas
 [] Trabalhar com algum subdocument (Coisa que eu não fiz)
 
-# Ideia de visão
+## Ideia de visão
 Materialized views are database objects containing the result of a query.
 Quero saber o nome dos medicamentos que foram utilizados em appointments e a quantidade.
 Fonte: [Dev.to](https://dev.to/ilinieja/mongodb-materialized-views-in-nodejs-mongoose-1593)
 
-# Change Streams
+## Change Streams
 O que eu implementei seguindo a documentação:
 ```
 async function main() { 
