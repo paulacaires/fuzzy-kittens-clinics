@@ -11,6 +11,10 @@ Informação dos animais.
 (Schema e modelagem em Clinical.js)
 Informações clínicas referentes aos procedimentos que os gatos já passaram.
 
+## Employers
+(Schema and model in Employer.js)
+Creating an employer schema to implement discriminators.
+
 ## To Do:
 [] Ver como criar um índice
 
