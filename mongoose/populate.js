@@ -320,7 +320,7 @@ async function main() {
     // cross_database_populate();
     // dynamic_ref_refPath();
     // populate_map();
-    // transform_populated()
+    transform_populated()
 }
 
 main ();
